@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/moscow"
+            android:icon="@drawable/ic_menu_moscow"
+            android:title="@string/drawer_title_moscow" />
+        <item
+            android:id="@+id/saint_petersburg"
+            android:icon="@drawable/ic_menu_sain_petersburg"
+            android:title="@string/drawer_title_saint_petersburg" />
+        <item
+            android:id="@+id/kazan"
+            android:icon="@drawable/ic_menu_kazan"
+            android:title="@string/drawer_title_kazan" />
+        <item
+            android:id="@+id/irkutsk"
+            android:icon="@drawable/ic_menu_irkutsk"
+            android:title="@string/drawer_title_irkutsk" />
+        <item
+            android:id="@+id/krasnoyarsk"
+            android:icon="@drawable/ic_menu_krasnoyarsk"
+            android:title="@string/drawer_title_krasnoyarsk" />
+        <item
+            android:id="@+id/novosibirsk"
+            android:icon="@drawable/ic_menu_novosibirsk"
+            android:title="@string/drawer_title_novosibirsk" />
+        <item
+            android:id="@+id/perm"
+            android:icon="@drawable/ic_menu_perm"
+            android:title="@string/drawer_title_perm" />
+        <item
+            android:id="@+id/pskov"
+            android:icon="@drawable/ic_menu_pskov"
+            android:title="@string/drawer_title_pskov" />
+        <item
+            android:id="@+id/samara"
+            android:icon="@drawable/ic_menu_samara"
+            android:title="@string/drawer_title_samara" />
+    </group>
+
+</menu>

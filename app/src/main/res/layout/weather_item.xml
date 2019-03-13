@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/weather_item_constraint_height"
+    android:layout_marginTop="@dimen/weather_item_constraint_margin_top"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_date"
+        android:layout_width="@dimen/weather_item_image_date_width"
+        android:layout_height="@dimen/weather_item_image_date_height"
+        android:layout_marginStart="@dimen/weather_item_image_date_margin_left"
+        android:layout_marginTop="@dimen/weather_item_image_date_margin_top"
+        android:layout_marginEnd="@dimen/weather_item_image_date_margin_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_date_time" />
+
+    <ImageView
+        android:id="@+id/iv_temp"
+        android:layout_width="@dimen/weather_item_image_temperature_width"
+        android:layout_height="@dimen/weather_item_image_temperature_height"
+        android:layout_marginStart="@dimen/weather_item_image_temperature_margin_left"
+        android:layout_marginTop="@dimen/weather_item_image_temperature_margin_top"
+        android:layout_marginEnd="@dimen/weather_item_image_temperature_margin_right"
+        android:layout_marginBottom="@dimen/weather_item_image_temperature_margin_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_date"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/icon_temp" />
+
+    <View
+        android:id="@+id/vertical_line"
+        android:layout_width="@dimen/weather_item_vertical_line_width"
+        android:layout_height="match_parent"
+        android:background="@color/weather_item_vertical_line"
+        android:layout_marginTop="@dimen/weather_item_vertical_line_margin_top"
+        android:layout_marginEnd="@dimen/weather_item_vertical_line_margin_right"
+        android:layout_marginBottom="@dimen/weather_item_vertical_line_margin_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/weather_item_text_date_margin_left"
+        android:layout_marginTop="@dimen/weather_item_text_date_margin_top"
+        android:layout_marginEnd="@dimen/weather_item_text_date_margin_right"
+        android:layout_marginBottom="@dimen/weather_item_text_date_margin_bottom"
+        tools:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toEndOf="@+id/iv_date"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.235" />
+
+    <TextView
+        android:id="@+id/tv_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/weather_item_text_temperature_margin_left"
+        android:layout_marginTop="@dimen/weather_item_text_temperature_margin_top"
+        android:layout_marginEnd="@dimen/weather_item_text_temperature_margin_right"
+        android:layout_marginBottom="@dimen/weather_item_text_temperature_margin_bottom"
+        tools:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toEndOf="@+id/iv_temp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.917" />
+</android.support.constraint.ConstraintLayout>

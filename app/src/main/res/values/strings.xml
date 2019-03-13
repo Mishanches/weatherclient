@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">Прогноз погоды, Москва</string>
+    <string name="navigation_drawer_open">Открыть панель навигации</string>
+    <string name="navigation_drawer_close">Закрыть панель навигации</string>
+    <string name="nav_header_title">Forecast Weather</string>
+    <string name="toast_unknown_error">Неизвестная ошибка. Попробуйте подключиться позднее.</string>
+
+    <string name="content_main_text_view_no_connection">Нет соединения</string>
+    <string name="content_main_button_no_connection">Перезагрузить</string>
+
+    <string name="drawer_title_moscow">Москва</string>
+    <string name="drawer_title_saint_petersburg">Санкт-Петербург</string>
+    <string name="drawer_title_kazan">Казань</string>
+    <string name="drawer_title_irkutsk">Иркутск</string>
+    <string name="drawer_title_krasnoyarsk">Красноярск</string>
+    <string name="drawer_title_novosibirsk">Новосибирск</string>
+    <string name="drawer_title_perm">Пермь</string>
+    <string name="drawer_title_pskov">Псков</string>
+    <string name="drawer_title_samara">Самара</string>
+
+</resources>

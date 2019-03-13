@@ -1,0 +1,42 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+
+    <dimen name="content_main_frame_margin_top">50dp</dimen>
+    <dimen name="content_main_button_refresh_margin_top">16dp</dimen>
+
+    <dimen name="weather_item_constraint_height">120dp</dimen>
+    <dimen name="weather_item_constraint_margin_top">50dp</dimen>
+
+    <dimen name="weather_item_image_date_width">40dp</dimen>
+    <dimen name="weather_item_image_date_height">40dp</dimen>
+    <dimen name="weather_item_image_date_margin_left">8dp</dimen>
+    <dimen name="weather_item_image_date_margin_top">16dp</dimen>
+    <dimen name="weather_item_image_date_margin_right">8dp</dimen>
+
+    <dimen name="weather_item_image_temperature_width">40dp</dimen>
+    <dimen name="weather_item_image_temperature_height">40dp</dimen>
+    <dimen name="weather_item_image_temperature_margin_left">8dp</dimen>
+    <dimen name="weather_item_image_temperature_margin_top">16dp</dimen>
+    <dimen name="weather_item_image_temperature_margin_right">8dp</dimen>
+    <dimen name="weather_item_image_temperature_margin_bottom">8dp</dimen>
+
+    <dimen name="weather_item_vertical_line_width">2dp</dimen>
+    <dimen name="weather_item_vertical_line_margin_top">35dp</dimen>
+    <dimen name="weather_item_vertical_line_margin_right">10dp</dimen>
+    <dimen name="weather_item_vertical_line_margin_bottom">10dp</dimen>
+
+    <dimen name="weather_item_text_date_margin_left">8dp</dimen>
+    <dimen name="weather_item_text_date_margin_top">8dp</dimen>
+    <dimen name="weather_item_text_date_margin_right">8dp</dimen>
+    <dimen name="weather_item_text_date_margin_bottom">8dp</dimen>
+
+    <dimen name="weather_item_text_temperature_margin_left">8dp</dimen>
+    <dimen name="weather_item_text_temperature_margin_top">8dp</dimen>
+    <dimen name="weather_item_text_temperature_margin_right">8dp</dimen>
+    <dimen name="weather_item_text_temperature_margin_bottom">8dp</dimen>
+
+</resources>
