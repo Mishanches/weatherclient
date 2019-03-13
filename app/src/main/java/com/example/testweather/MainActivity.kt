@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-
         presenter.loadWeather()
         presenter.setUpView(this)
 
@@ -71,7 +70,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         weatherAdapter.mData = listWeather
         swMainSwipe.isRefreshing = false
-        //rvWeather.visibility = View.VISIBLE
         llNoData.visibility = if (rvWeather.adapter?.itemCount == 0) View.VISIBLE else View.GONE
         rvWeather.visibility = if (llNoData.visibility == View.VISIBLE) View.GONE else View.VISIBLE
 

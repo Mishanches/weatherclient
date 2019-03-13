@@ -2,7 +2,6 @@ package com.example.testweather.api
 
 import com.example.testweather.model.WeatherResponse
 import io.reactivex.Single
-import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Query
 
