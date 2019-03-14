@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="colorPrimary">#ffbb62</color>
     <color name="colorPrimaryDark">#af7b36</color>
     <color name="colorAccent">#D81B60</color>
-
     <color name="weather_item_vertical_line">#74AF7B36</color>
-    <!--<color name="weather_item_vertical_line">#90909090</color>-->
+
 </resources>
