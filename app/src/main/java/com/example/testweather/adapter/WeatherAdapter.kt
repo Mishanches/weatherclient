@@ -10,6 +10,9 @@ import kotlin.math.roundToLong
 
 class WeatherAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
+    private var tempKelvinScale: Double = 273.15
+    private var degreeSign = "°С"
+
     var mData: List<WeatherDate>? = null
         set(value) {
             field = value
@@ -27,10 +30,10 @@ class WeatherAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onBindViewHolder(p0: RecyclerView.ViewHolder, p1: Int) {
         
-        val celsius: Long = mData?.get(p1)?.main?.temperature?.minus(273.15)?.roundToLong() ?: 0
+        val celsius: Long = mData?.get(p1)?.main?.temperature?.minus(tempKelvinScale)?.roundToLong() ?: 0
 
         p0.itemView.tv_date.text = mData?.get(p1)?.date
-        p0.itemView.tv_temp.text = ("$celsius°С")
+        p0.itemView.tv_temp.text = ("$celsius$degreeSign")
 
     }
 }

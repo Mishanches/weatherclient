@@ -5,7 +5,6 @@ import com.example.testweather.api.ServiceGenerator
 import com.example.testweather.interfaces.IMainPresenter
 import dagger.Module
 import dagger.Provides
-import javax.inject.Singleton
 
 @Module
 class PresenterModule {
