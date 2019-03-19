@@ -17,7 +17,7 @@ object ServiceGenerator {
         .writeTimeout(10, TimeUnit.SECONDS)
         .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
 
-    val retrofit = Retrofit.Builder()
+    private val retrofit = Retrofit.Builder()
         .client(httpClient.build())
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
