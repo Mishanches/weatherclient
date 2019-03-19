@@ -9,7 +9,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class MainPresenter(private val serviceGenerator: ServiceGenerator): IMainPresenter {
+class MainPresenter(private val serviceGenerator: ServiceGenerator) : IMainPresenter {
 
     private var disposables: CompositeDisposable = CompositeDisposable()
     private var view: IMainActivity? = null
@@ -27,7 +27,7 @@ class MainPresenter(private val serviceGenerator: ServiceGenerator): IMainPresen
                 .subscribe(this::onWeatherLoaded, this::onWeatherError)
         )
 
-         code = codeCity
+        code = codeCity
 
     }
 
@@ -100,7 +100,7 @@ class MainPresenter(private val serviceGenerator: ServiceGenerator): IMainPresen
         disposables.dispose()
     }
 
-    private fun onWeatherLoaded(weatherDate: List<WeatherDate>){
+    private fun onWeatherLoaded(weatherDate: List<WeatherDate>) {
         view?.showWeathers(weatherDate)
     }
 

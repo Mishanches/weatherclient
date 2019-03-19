@@ -77,8 +77,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         swMainSwipe.isRefreshing = false
         llNoData.visibility = View.VISIBLE
         rvWeather.visibility = if (llNoData.visibility == View.VISIBLE) View.GONE else View.VISIBLE
-        Toast.makeText(this, error ?: getString(R.string.toast_unknown_error),
-            Toast.LENGTH_SHORT).show()
+        Toast.makeText(
+            this, error ?: getString(R.string.toast_unknown_error),
+            Toast.LENGTH_SHORT
+        ).show()
     }
 
     override fun upDateActionBar(nameCity: Int) {
