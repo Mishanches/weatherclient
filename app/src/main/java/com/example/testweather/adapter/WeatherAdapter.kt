@@ -30,10 +30,11 @@ class WeatherAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onBindViewHolder(p0: RecyclerView.ViewHolder, p1: Int) {
         
-        val celsius: Long = mData?.get(p1)?.main?.temperature?.minus(tempKelvinScale)?.roundToLong() ?: 0
+        val celsius: Long? = mData?.get(p1)?.main?.temperature?.minus(tempKelvinScale)?.roundToLong()
 
         p0.itemView.tv_date.text = mData?.get(p1)?.date
         p0.itemView.tv_temp.text = ("$celsius$degreeSign")
 
     }
+
 }

@@ -75,7 +75,6 @@ class MainPresenter(private val serviceGenerator: ServiceGenerator): IMainPresen
     }
 
     private fun onWeatherLoaded(weatherDate: List<WeatherDate>){
-
         view?.showWeathers(weatherDate)
     }
 

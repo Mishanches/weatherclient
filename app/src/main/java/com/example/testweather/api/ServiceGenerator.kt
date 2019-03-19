@@ -26,4 +26,5 @@ object ServiceGenerator {
 
     val serverApi: ServerApi
         get() = retrofit.create(ServerApi::class.java)
+
 }
