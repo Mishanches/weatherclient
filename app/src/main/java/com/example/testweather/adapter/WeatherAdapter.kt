@@ -36,5 +36,4 @@ class WeatherAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         p0.itemView.tv_temp.text = ("$celsius$degreeSign")
 
     }
-
 }

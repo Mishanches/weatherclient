@@ -31,39 +31,65 @@ class MainPresenter(private val serviceGenerator: ServiceGenerator): IMainPresen
 
     }
 
-    override fun getCodeCity(): String {
-        return code
-    }
-
     override fun setUpView(view: IMainActivity?) {
         this.view = view
     }
 
-    override fun setTitleForCity(codeCity: Int){
+    override fun getCodeCity(): String {
+        return code
+    }
 
-        val nameCity: Int
+    override fun onNavigationItem(item: Int) {
 
-        when(codeCity) {
+        var nameCity = R.string.drawer_title_moscow
 
-            CityCode.MOSCOW.code -> nameCity = R.string.drawer_title_moscow
+        when (item) {
 
-            CityCode.SAINT_PETERSBURG.code -> nameCity = R.string.drawer_title_saint_petersburg
+            R.id.moscow -> {
+                loadWeather(CityCode.MOSCOW.code.toString())
+                nameCity = R.string.drawer_title_moscow
+            }
 
-            CityCode.KAZAN.code -> nameCity = R.string.drawer_title_kazan
+            R.id.saint_petersburg -> {
+                loadWeather(CityCode.SAINT_PETERSBURG.code.toString())
+                nameCity = R.string.drawer_title_saint_petersburg
+            }
 
-            CityCode.IRKUTSK.code -> nameCity = R.string.drawer_title_irkutsk
+            R.id.kazan -> {
+                loadWeather(CityCode.KAZAN.code.toString())
+                nameCity = R.string.drawer_title_kazan
+            }
 
-            CityCode.KRASNOYARSK.code -> nameCity = R.string.drawer_title_krasnoyarsk
+            R.id.irkutsk -> {
+                loadWeather(CityCode.IRKUTSK.code.toString())
+                nameCity = R.string.drawer_title_irkutsk
+            }
 
-            CityCode.NOVOSIBIRSK.code -> nameCity = R.string.drawer_title_novosibirsk
+            R.id.krasnoyarsk -> {
+                loadWeather(CityCode.KRASNOYARSK.code.toString())
+                nameCity = R.string.drawer_title_krasnoyarsk
+            }
 
-            CityCode.PERM.code -> nameCity = R.string.drawer_title_perm
+            R.id.novosibirsk -> {
+                loadWeather(CityCode.NOVOSIBIRSK.code.toString())
+                nameCity = R.string.drawer_title_novosibirsk
+            }
 
-            CityCode.PSKOV.code -> nameCity = R.string.drawer_title_pskov
+            R.id.perm -> {
+                loadWeather(CityCode.PERM.code.toString())
+                nameCity = R.string.drawer_title_perm
+            }
 
-            CityCode.SAMARA.code -> nameCity = R.string.drawer_title_samara
+            R.id.pskov -> {
+                loadWeather(CityCode.PSKOV.code.toString())
+                nameCity = R.string.drawer_title_pskov
+            }
 
-            else -> nameCity = R.string.app_name
+            R.id.samara -> {
+                loadWeather(CityCode.SAMARA.code.toString())
+                nameCity = R.string.drawer_title_samara
+            }
+
         }
 
         view?.upDateActionBar(nameCity)

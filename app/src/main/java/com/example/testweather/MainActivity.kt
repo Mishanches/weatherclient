@@ -67,22 +67,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun showWeathers(listWeather: List<WeatherDate>) {
-
         weatherAdapter.mData = listWeather
         swMainSwipe.isRefreshing = false
         llNoData.visibility = if (rvWeather.adapter?.itemCount == 0) View.VISIBLE else View.GONE
         rvWeather.visibility = if (llNoData.visibility == View.VISIBLE) View.GONE else View.VISIBLE
-
     }
 
     override fun showError(error: String?) {
-
         swMainSwipe.isRefreshing = false
         llNoData.visibility = View.VISIBLE
         rvWeather.visibility = if (llNoData.visibility == View.VISIBLE) View.GONE else View.VISIBLE
         Toast.makeText(this, error ?: getString(R.string.toast_unknown_error),
             Toast.LENGTH_SHORT).show()
-
     }
 
     override fun upDateActionBar(nameCity: Int) {
@@ -94,71 +90,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onDestroy()
     }
 
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        rvWeather.visibility = View.VISIBLE
+        presenter.onNavigationItem(item.itemId)
+        drawer_layout.closeDrawer(GravityCompat.START)
+        return true
+    }
+
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
         } else {
             super.onBackPressed()
         }
-    }
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-
-        rvWeather.visibility = View.VISIBLE
-
-        when (item.itemId) {
-
-            R.id.moscow -> {
-                presenter.loadWeather(CityCode.MOSCOW.code.toString())
-                presenter.setTitleForCity(CityCode.MOSCOW.code)
-
-            }
-
-            R.id.saint_petersburg -> {
-                presenter.loadWeather(CityCode.SAINT_PETERSBURG.code.toString())
-                presenter.setTitleForCity(CityCode.SAINT_PETERSBURG.code)
-            }
-
-            R.id.kazan -> {
-                presenter.loadWeather(CityCode.KAZAN.code.toString())
-                presenter.setTitleForCity(CityCode.KAZAN.code)
-            }
-
-            R.id.irkutsk -> {
-                presenter.loadWeather(CityCode.IRKUTSK.code.toString())
-                presenter.setTitleForCity(CityCode.IRKUTSK.code)
-            }
-
-            R.id.krasnoyarsk -> {
-                presenter.loadWeather(CityCode.KRASNOYARSK.code.toString())
-                presenter.setTitleForCity(CityCode.KRASNOYARSK.code)
-            }
-
-            R.id.novosibirsk -> {
-                presenter.loadWeather(CityCode.NOVOSIBIRSK.code.toString())
-                presenter.setTitleForCity(CityCode.NOVOSIBIRSK.code)
-            }
-
-            R.id.perm -> {
-                presenter.loadWeather(CityCode.PERM.code.toString())
-                presenter.setTitleForCity(CityCode.PERM.code)
-            }
-
-            R.id.pskov -> {
-                presenter.loadWeather(CityCode.PSKOV.code.toString())
-                presenter.setTitleForCity(CityCode.PSKOV.code)
-            }
-
-            R.id.samara -> {
-                presenter.loadWeather(CityCode.SAMARA.code.toString())
-                presenter.setTitleForCity(CityCode.SAMARA.code)
-            }
-
-        }
-
-        drawer_layout.closeDrawer(GravityCompat.START)
-        return true
-
     }
 
 }
