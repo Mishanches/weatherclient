@@ -98,6 +98,7 @@ class MainPresenter(private val serviceGenerator: ServiceGenerator) : IMainPrese
 
     override fun onDestroy() {
         disposables.dispose()
+        view = null
     }
 
     private fun onWeatherLoaded(weatherDate: List<WeatherDate>) {
